@@ -19,6 +19,8 @@ const Chat = () => {
     return (
         <>
             <main className="flex flex-col p-[10px]">
+                {/* Style fixing */}
+                {/* bg-gray-100 shadow-xl border relative */}
                 {messages &&
                     messages.map((message) => (
                         <Message key={message.id} message={message} />
