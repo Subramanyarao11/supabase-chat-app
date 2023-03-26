@@ -1,26 +1,13 @@
-import { useEffect, useState } from "react";
-import { supabase } from './supabaseClient'
+import Chat from "./componenets/Chat";
+import Navbar from "./componenets/Navbar";
 function App() {
-    const [messages, setMessages] = useState([]);
-
-    useEffect(() => {
-        getMessages();
-      }, []);
-
-      async function getMessages() {
-        const { data } = await supabase.from("messages").select();
-        setMessages(data);
-      }
-
   return (
-    <>
-    <div className="text-center">Hello from Supabase!</div>
-    <ul>
-        {messages && messages.map((message) => (
-          <li key={message.id}>{message.message}</li>
-        ))}
-      </ul>
-      </>
+    <div className="max-w-[728px] mx-auto text-center">
+    <section className='flex flex-col h-[90vh] bg-gray-100 mt-10 shadow-xl border relative'>
+      <Navbar />
+      <Chat />
+    </section>
+  </div>
   )
 }
 
