@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Custom CSS */
+
+.custom-margin {
+    margin: 10vh 0 10vh;
+}
